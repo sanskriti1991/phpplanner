@@ -1,0 +1,25 @@
+          _                       _
+  _ __   | |__    _ __    _ __   | |   __ _   _ __    _ __     ___   _ __
+ | '_ \  | '_ \  | '_ \  | '_ \  | |  / _` | | '_ \  | '_ \   / _ \ | '__|
+ | |_) | | | | | | |_) | | |_) | | | | (_| | | | | | | | | | |  __/ | |
+ | .__/  |_| |_| | .__/  | .__/  |_|  \__,_| |_| |_| |_| |_|  \___| |_|
+ |_|             |_|     |_|
+
+
+
+1) Install mySQL and create the database you wish to install to (if it does not already exist)
+
+2) Install PHP (www.php.net)
+
+3) Modify "config.php" to your liking.
+   Make sure your mySQL information is correct!
+
+4) Log in as "admin" with the password "root" and change your details
+
+5) Enjoy
+
+
+* http://phpplanner.sourceforge.net
+* http://dreamcoder.dk
+
+A dreamcoder.dk product by Tom Sommer
