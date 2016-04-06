@@ -34,6 +34,7 @@ function delete_item($id) {
 /* Edit event */
 	
 function edit_item($id,$userid,$newCaption,$new_escription,$private=0,$color=0) {
+        //echo "here";
 		$SQL = mysql_query("SELECT * FROM cal_items WHERE id = ". $id );//" AND added_by = ". $userid);
 		if (mysql_num_rows($SQL) > 0){ //|| getUserPermission($_SESSION['userid'],"allow_edit")) {
 				mysql_query("UPDATE cal_items set caption = '". $newCaption ."', description = '". $new_escription ."', last_updated = NOW(), edited_by = ". $userid .", private = ". $private .", color = $color WHERE id = ". $id) or die(mysql_error());

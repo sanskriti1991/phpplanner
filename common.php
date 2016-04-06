@@ -115,6 +115,13 @@
 	function AddParem($parem) 
 	{
 		global $current;
+        //fixed bug unable to edit events from search.php 
+        if($current['base'] == "search.php")
+        {
+            //stamp was missing
+            $stamp = mktime(0,0,0,$current['month'],$stamp-$current['first_day_of_month']+1,$current['year']);
+            $current['base'] = "manage.php?stamp=".$stamp;
+        }
 		$newbase = sprintf("%s%s%s"
 				, $current['base']
 				, ( eregi('\?', $current['base']) ) ? "&" : "?"

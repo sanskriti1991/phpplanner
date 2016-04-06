@@ -28,13 +28,17 @@
   </div>
 </form>
 <?php
-	  
+	  echo $_SESSION['userid'];
 	 if (isset($_POST['query'])) 
 	 {
+         //In search.php don't browse only personal items
+         //by default admin is user id = 1 and can even see pvt events added by any other user but all other users can only see their own pvt events
 	 $SQL = mysql_query("SELECT `date`, color, private, caption, description,id, added_by, edited_by, UNIX_TIMESTAMP(last_updated) as lastupdated 
 						FROM cal_items 
-						WHERE caption LIKE '%". $_POST['query'] ."%' 
+						WHERE (private = 0 OR private = ". $_SESSION['userid'].") 
+                        AND (caption LIKE '%". $_POST['query'] ."%' 
 						OR description LIKE '%". $_POST['query'] ."%'
+                        )
 						ORDER BY `date` DESC"
 						);
 	  	if ( !hide() ) 
