@@ -28,7 +28,6 @@
   </div>
 </form>
 <?php
-	  echo $_SESSION['userid'];
 	 if (isset($_POST['query'])) 
 	 {
          //In search.php don't browse only personal items
